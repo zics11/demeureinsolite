@@ -21,7 +21,7 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        deumeureinsolite@gmail.com
+        demeureinsolite@gmail.com
       </p>
     </>
   )
