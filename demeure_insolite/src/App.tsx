@@ -1,32 +1,27 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import dilogo from './assets/demeureinsolite_logo.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+          <img src={dilogo} className="logo" alt="Vite logo" />
       </div>
-      <h1>Vite + React</h1>
+      <h1>Bienvenue sur le site officiel de Demeure insolite</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button>
+          Réserver
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Bientot vous pourrez réserver nos logement a Gruissan ou dans les Corbières directement depuis le site sans intermédiare et au meilleur prix
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        deumeureinsolite@gmail.com
       </p>
     </>
   )
