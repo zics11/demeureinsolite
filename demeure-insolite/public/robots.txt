@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.demeureinsolite.fr
+
+# Sitemaps
+Sitemap: https://www.demeureinsolite.fr/sitemap.xml
