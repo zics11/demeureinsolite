@@ -1,0 +1,8 @@
+/* reservation.module.css */
+.customBookFormControl {
+    min-height: 50px; /* Modifiez la hauteur minimale */
+    padding: 8px 12px; /* Modifiez le rembourrage */
+    border: 2px solid #c83d3d; /* Modifiez la couleur de la bordure */
+    border-radius: 4px; /* Modifiez le rayon de la bordure */
+    background-color: aqua;
+  }
