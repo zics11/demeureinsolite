@@ -12,7 +12,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# COPY .env.dev .env.production
+COPY .env.production .env.production
 RUN npm run build
 
 # === RUNNER STAGE ===
@@ -21,9 +21,8 @@ FROM node:18-alpine AS runner
 WORKDIR /app
 RUN addgroup --system --gid 1001 nodejs && \
     adduser --system --uid 1001 nextjs
-# ENV HOSTNAME portal-v2-dev.lumivero.com
 COPY --from=builder /app/public ./public
-# COPY --from=builder /app/.env.production ./.env.production
+COPY --from=builder /app/.env.production ./.env.production
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 USER nextjs
