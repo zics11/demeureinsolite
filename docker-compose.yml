@@ -7,17 +7,5 @@ services:
       dockerfile: docker/Dockerfile
     container_name: 'demeureinsolite_web'
     restart: always
-    networks:
-      - web
-    labels:
-      - 'traefik.enable=true'
-      - 'traefik.docker.network=web'
-      - 'traefik.http.routers.react-app.rule=Host(`demeureinsolite.fr`)'
-      - 'traefik.http.routers.react-app.entrypoints=websecure'
-      - 'traefik.http.routers.react-app.tls=true'
-      - 'traefik.http.routers.react-app.tls.certresolver=letsencrypt-gandi'
-      - 'traefik.http.services.react-app.loadbalancer.server.port=3000'
-networks:
-  default:
-  web:
-    external: true
+    ports:
+      - '3000:3000'
